@@ -1,0 +1,19 @@
+:root {
+  --color-bg: #181614;
+  --color-surface: #211e1a;
+  --color-text: #f9f4ed;
+  --color-muted: #b6ac9c;
+  --color-divider: #332e28;
+  --color-accent: #f6a06b;
+  --font-heading: 'Caprasimo', system-ui, sans-serif;
+  --font-body: 'Figtree', system-ui, sans-serif;
+}
+
+[data-theme='light'] {
+  --color-bg: #f5ead8;
+  --color-surface: #ebddc5;
+  --color-text: #201e1d;
+  --color-muted: #645c50;
+  --color-divider: #dcd3c4;
+  --color-accent: #8c491a;
+}
