@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 export type Theme = 'dark' | 'light';
 
-const STORAGE_KEY = 'jr-site-theme';
+export const STORAGE_KEY = 'jr-site-theme';
 
 function readStoredTheme(): Theme | null {
   try {
