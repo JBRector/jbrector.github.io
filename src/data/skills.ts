@@ -1,0 +1,18 @@
+export const skills: readonly string[] = [
+  'JavaScript',
+  'TypeScript',
+  'HTML',
+  'CSS',
+  'Accessibility',
+  'React',
+  'Vue',
+  'React Native',
+  'Testing Library',
+  'Jest',
+  'Vite',
+  'Playwright',
+  'Claude Code',
+  'Next.js',
+  'Tailwind',
+  'Sass',
+];
