@@ -1,0 +1,9 @@
+.footer {
+  color: var(--color-muted);
+  font-size: 14.5px;
+  animation: rise 0.5s ease-out 0.24s both;
+}
+
+.footer__text {
+  margin: 0;
+}
