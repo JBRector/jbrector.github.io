@@ -11,7 +11,7 @@ describe('About', () => {
   it('renders all three bio paragraphs', () => {
     render(<About />);
     expect(screen.getByText(/Hi, I'm Jason/)).toBeInTheDocument();
-    expect(screen.getByText(/Most of my days/)).toBeInTheDocument();
+    expect(screen.getByText(/I'm passionate about building/)).toBeInTheDocument();
     expect(screen.getByText(/Outside of work/)).toBeInTheDocument();
   });
 });

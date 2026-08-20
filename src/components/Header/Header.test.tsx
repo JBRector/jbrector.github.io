@@ -12,7 +12,9 @@ describe('Header', () => {
 
   it('renders the subtitle', () => {
     render(<Header theme="dark" onToggleTheme={vi.fn()} />);
-    expect(screen.getByText('Front end engineer — Columbus, Ohio')).toBeInTheDocument();
+    expect(
+      screen.getByText('Front end engineer : Dad : Musician : Tattooed guy : Columbus, Ohio'),
+    ).toBeInTheDocument();
   });
 
   it('forwards a toggle click to onToggleTheme', async () => {
