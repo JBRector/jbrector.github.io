@@ -40,4 +40,4 @@ Run a single test file: `npx vitest run src/components/Header/Header.test.tsx --
 - `docs/superpowers/specs/2026-08-16-portfolio-site-design.md` — the binding design spec (exact tokens, spacing, typography, accessibility requirements, component-by-component behavior).
 - `docs/superpowers/plans/` — the two implementation plans (scaffolding, component build-out) this codebase was built from.
 
-**Deployment:** not yet wired up. `vite.config.ts` already sets `base: '/jasonrector/'` for GitHub Pages; there is no `.github/workflows/` yet.
+**Deployment:** `.github/workflows/deploy.yml` builds and publishes `dist/` to GitHub Pages on every push to `main` (via `actions/upload-pages-artifact` + `actions/deploy-pages`). The repo is the account's user-page repo (`JBRector/jbrector.github.io`), served from the domain root, so `vite.config.ts` sets `base: '/'`.
