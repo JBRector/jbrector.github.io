@@ -4,4 +4,4 @@ dist-ssr
 *.local
 .DS_Store
 *.tsbuildinfo
-old
+docs/superpowers
