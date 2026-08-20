@@ -1,0 +1,12 @@
+.app {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(46px, 7vw, 72px);
+}
+
+.app__main {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(46px, 7vw, 72px);
+}

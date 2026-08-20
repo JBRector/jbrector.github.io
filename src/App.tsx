@@ -1,3 +1,25 @@
+import { useTheme } from './hooks/useTheme';
+import SkipLink from './components/SkipLink/SkipLink';
+import Header from './components/Header/Header';
+import About from './components/About/About';
+import SkillList from './components/SkillList/SkillList';
+import LinkList from './components/LinkList/LinkList';
+import Footer from './components/Footer/Footer';
+import styles from './App.module.css';
+
 export default function App() {
-  return <h1>Jason Rector</h1>;
+  const { theme, toggleTheme } = useTheme();
+
+  return (
+    <div className={styles.app}>
+      <SkipLink />
+      <Header theme={theme} onToggleTheme={toggleTheme} />
+      <main id="main" className={styles['app__main']}>
+        <About />
+        <SkillList />
+        <LinkList />
+      </main>
+      <Footer />
+    </div>
+  );
 }
