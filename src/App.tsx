@@ -1,10 +1,5 @@
 import { useTheme } from './hooks/useTheme';
-import SkipLink from './components/SkipLink/SkipLink';
-import Header from './components/Header/Header';
-import About from './components/About/About';
-import SkillList from './components/SkillList/SkillList';
-import LinkList from './components/LinkList/LinkList';
-import Footer from './components/Footer/Footer';
+import { SkipLink, Header, About, SkillList, LinkList, Footer } from './components';
 import styles from './App.module.css';
 
 export default function App() {

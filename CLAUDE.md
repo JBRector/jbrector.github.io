@@ -34,6 +34,8 @@ Run a single test file: `npx vitest run src/components/Header/Header.test.tsx --
 
 **Folder-internal subcomponents:** `SkillList/Chip.tsx`, `LinkList/LinkRow.tsx`, and `ThemeToggle/{SunIcon,MoonIcon}.tsx` share their parent's CSS Module and are imported only within their own folder — nothing outside should import them directly.
 
+**Barrel export:** `src/components/index.ts` re-exports each top-level component (`About`, `Footer`, `Header`, `LinkList`, `SkillList`, `SkipLink`, `ThemeToggle`) so consumers import from `./components` instead of a per-component path. It intentionally excludes the folder-internal subcomponents above — add a new top-level component here when one is added, but never the internal ones.
+
 **Accessibility is a binding constraint, not polish:** `eslint-plugin-jsx-a11y` is wired into `eslint.config.js`; `vitest-axe` runs in every component's tests via `src/test/setup.ts`. That setup file hand-registers the axe matcher directly from `vitest-axe/dist/matchers` instead of the package's documented entry points — the published `vitest-axe@0.1.0` ships a broken/type-only export that silently no-ops otherwise (see the comment block at the top of `setup.ts` before touching this or upgrading the package).
 
 **Reference docs:**
