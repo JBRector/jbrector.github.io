@@ -12,7 +12,9 @@ export default function Header({ theme, onToggleTheme }: HeaderProps) {
     <header className={styles.header}>
       <div className={styles['header__name-block']}>
         <h1 className={styles['header__heading']}>Jason Rector</h1>
-        <p className={styles['header__subtitle']}>Front end engineer — Columbus, Ohio</p>
+        <p className={styles['header__subtitle']}>
+          Front end engineer : Dad : Musician : Tattooed guy : Columbus, Ohio
+        </p>
       </div>
       <ThemeToggle theme={theme} onToggle={onToggleTheme} />
     </header>
