@@ -1,0 +1,30 @@
+.about {
+  animation: rise 0.5s ease-out 0.06s both;
+}
+
+.about__heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.about__prose {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+
+.about__paragraph {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.about__paragraph--lead {
+  font-size: 19px;
+  color: var(--color-text);
+}
