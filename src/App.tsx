@@ -14,7 +14,7 @@ export default function App() {
     <div className={styles.app}>
       <SkipLink />
       <Header theme={theme} onToggleTheme={toggleTheme} />
-      <main id="main" className={styles['app__main']}>
+      <main id="main" tabIndex={-1} className={styles['app__main']}>
         <About />
         <SkillList />
         <LinkList />

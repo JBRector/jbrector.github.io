@@ -14,8 +14,8 @@ describe('LinkList', () => {
   });
 
   it('hides the decorative arrow from assistive tech', () => {
-    render(<LinkList />);
-    const hidden = document.querySelectorAll('[aria-hidden="true"]');
+    const { container } = render(<LinkList />);
+    const hidden = container.querySelectorAll('[aria-hidden="true"]');
     expect(hidden).toHaveLength(links.length);
   });
 

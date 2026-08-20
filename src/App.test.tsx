@@ -3,10 +3,12 @@ import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe } from 'vitest-axe';
 import App from './App';
+import { STORAGE_KEY } from './hooks/useTheme';
 
 afterEach(() => {
   cleanup();
   document.documentElement.removeAttribute('data-theme');
+  window.localStorage.removeItem(STORAGE_KEY);
 });
 
 describe('App', () => {
@@ -41,8 +43,21 @@ describe('App', () => {
   });
 
   it('has no axe violations in light mode', async () => {
-    document.documentElement.dataset.theme = 'light';
+    window.localStorage.setItem(STORAGE_KEY, 'light');
     const { container } = render(<App />);
+    expect(document.documentElement.dataset.theme).toBe('light');
     expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it('toggles the document theme end to end', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    expect(document.documentElement.dataset.theme).toBe('dark');
+
+    const toggle = screen.getByRole('button', { name: 'Switch to light theme' });
+    await user.click(toggle);
+
+    expect(document.documentElement.dataset.theme).toBe('light');
+    expect(screen.getByRole('button', { name: 'Switch to dark theme' })).toBeInTheDocument();
   });
 });
